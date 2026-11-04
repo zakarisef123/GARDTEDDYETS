@@ -102,7 +102,7 @@ button{font:inherit;}
 body.menu-open{overflow:hidden;}
 
 /* ---------- héros accueil ---------- */
-.home-hero{position:relative; color:#fff; overflow:hidden; padding:2.6rem 0 3rem; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.82),rgba(16,49,100,.72)),url("/images/plombier-devis-client.jpg"); background-size:cover; background-position:60% 40%;}
+.home-hero{position:relative; color:#fff; overflow:hidden; padding:2.6rem 0 3rem; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.82),rgba(16,49,100,.72)),url("/images/hero-nimes.jpg"); background-size:cover; background-position:60% 40%;}
 .home-hero::before{display:none;}
 .home-hero .home-hero-text{max-width:640px;}
 .home-hero::before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(110deg,#000 30%,transparent 80%); -webkit-mask-image:linear-gradient(110deg,#000 30%,transparent 80%);}
@@ -510,7 +510,7 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
   .callbar{display:none;}
   .footer-base{padding-bottom:1.6rem; flex-direction:row; justify-content:space-between; align-items:center;}
   .consent{bottom:1.2rem;}
-  .home-hero{padding:5.5rem 0 6rem; background-image:linear-gradient(95deg,rgba(16,49,100,.96) 0%,rgba(16,49,100,.88) 38%,rgba(16,49,100,.35) 70%,rgba(16,49,100,.05) 100%),url("/images/plombier-devis-client.jpg");}
+  .home-hero{padding:5.5rem 0 6rem; background-image:linear-gradient(95deg,rgba(16,49,100,.96) 0%,rgba(16,49,100,.88) 38%,rgba(16,49,100,.35) 70%,rgba(16,49,100,.05) 100%),url("/images/hero-nimes.jpg");}
   .home-hero-layout{grid-template-columns:1fr;}
   .assure-grid{grid-template-columns:repeat(4,1fr);}
   .assure-pt{border-bottom:none; border-right:1px dashed var(--line); padding:1.3rem 1rem;}
