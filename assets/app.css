@@ -278,8 +278,14 @@ body.menu-open{overflow:hidden;}
 .insurers-block{padding:4rem 0; background:var(--sand); border-top:1px solid var(--line);}
 .insurers-title{max-width:760px; margin-bottom:2rem;}
 .insurers-title p{color:var(--mute);}
-.insurers-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem;}
-.insurer{display:flex; align-items:center; justify-content:center; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); width:calc(50% - .25rem); height:96px; padding:.9rem;}
+.insurers-grid{display:flex; flex-direction:column; gap:.8rem; overflow:hidden; -webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent); mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);}
+.insurers-row{overflow:hidden;}
+.insurers-move{display:flex; width:max-content; animation:insurers-scroll 50s linear infinite;}
+.insurers-row-rev .insurers-move{animation-direction:reverse; animation-duration:56s;}
+.insurers-row:hover .insurers-move{animation-play-state:paused;}
+@keyframes insurers-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.insurers-move{animation:none; flex-wrap:wrap; width:auto; justify-content:center;} .insurer[aria-hidden="true"]{display:none;}}
+.insurer{flex:none; display:flex; align-items:center; justify-content:center; background:var(--paper); border:1px solid var(--line); border-radius:var(--r); width:150px; height:84px; padding:.8rem; margin-right:.8rem;}
 .insurer img{max-height:64px; max-width:100%; width:auto; object-fit:contain;}
 .insurers-note{text-align:center; margin-top:1rem; font-size:.85rem; color:var(--mute); font-weight:600;}
 
@@ -472,7 +478,7 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
 /* ---------- responsive ---------- */
 @media (min-width:560px){
   .assure-grid{grid-template-columns:1fr 1fr; column-gap:1.5rem;}
-  .insurer{width:190px;}
+  .insurer{width:180px; height:92px;}
   .works-grid{grid-template-columns:1fr 1fr;}
   .f-row.cols-2{grid-template-columns:1fr 1fr;}
   .gestures{grid-template-columns:1fr 1fr;}
