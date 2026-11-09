@@ -18,6 +18,6 @@ Site statique (HTML/CSS/JS, sans build) de Teddy-ets (SOS RENOV), entreprise de 
 - **Mentions légales** (`mentions-legales/index.html`) : éditeur SOS RENOV renseigné ; restent `[À COMPLÉTER]` : TVA intracommunautaire, assureur, médiateur.
 - **Suivi Google** : Google Tag Manager, Google Ads et la validation Search Console ne sont pas installés
   (identifiants propres à ce site à ajouter).
-- **Formulaires** : envoyés via FormSubmit vers sos.renov10@gmail.com ; un e-mail d'activation FormSubmit sera envoyé
+- **Formulaires** : envoyés via FormSubmit vers serrurerienationale5@gmail.com ; un e-mail d'activation FormSubmit sera envoyé
   au premier envoi depuis ce site. Pour utiliser une autre boîte, remplacer cette adresse dans les `action="https://formsubmit.co/..."`.
 - **Téléphone** : 07 54 86 49 39 (constantes `PHONE`/`TEL`).
