@@ -70,8 +70,17 @@
 
   /* Consentement (Consent Mode v2) */
   var KEY = "pue_consent_v1";
+  var GTM_ID = "GTM-53CVPFZZ"; /* Google Tag Manager Teddy-ets (conversions Google Ads appel + formulaire) */
   var bar = document.getElementById("consent-bar");
   function push() { window.dataLayer = window.dataLayer || []; window.dataLayer.push(arguments); }
+  function loadGTM() {
+    if (window.__gtmLoaded) return; window.__gtmLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var j = document.createElement("script"); j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + GTM_ID;
+    document.head.appendChild(j);
+  }
   function apply(c) {
     push("consent", "update", {
       ad_storage: c.ads ? "granted" : "denied",
@@ -79,6 +88,7 @@
       ad_personalization: c.ads ? "granted" : "denied",
       analytics_storage: c.analytics ? "granted" : "denied"
     });
+    if (c && (c.ads || c.analytics)) loadGTM(); /* GTM après la mise à jour du consentement */
   }
   function stored() { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } }
   function save(c) { try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {} apply(c); bar.classList.remove("open"); }
@@ -90,6 +100,18 @@
     var reopen = document.getElementById("consent-open");
     reopen && reopen.addEventListener("click", function (e) { e.preventDefault(); bar.classList.add("open"); });
   }
+
+  /* Mesure Google Ads (via GTM) : clic sur un numéro et demande envoyée (page /merci/) */
+  function gtmEvent(name, data) {
+    window.dataLayer = window.dataLayer || [];
+    var e = { event: name, page_path: location.pathname };
+    for (var k in data) e[k] = data[k];
+    window.dataLayer.push(e);
+  }
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+    a.addEventListener("click", function () { gtmEvent("clic_appel", { lien: a.getAttribute("href") }); });
+  });
+  if (/^\/merci\/?$/.test(location.pathname)) gtmEvent("envoi_formulaire", { emplacement: "merci" });
 
   /* Formulaires FormSubmit : envoi classique, puis redirection vers /merci/ */
   document.querySelectorAll('form[action*="formsubmit.co"]').forEach(function (form) {
