@@ -6,12 +6,13 @@ Site statique (HTML/CSS/JS, sans build) de Teddy-ets (SOS RENOV), entreprise de 
 
 - `index.html` : accueil
 - `urgence-plombier/`, `prestations/` et une page par prestation (fuite, débouchage, chauffe-eau, sanitaire, dégât des eaux, salle de bain, assainissement)
-- `zones-intervention/` et une page par secteur (tout le Gard, 30) : Nîmes, Alès & Cévennes, Uzès & Pont du Gard,
-  Bagnols-sur-Cèze & Gard rhodanien, Beaucaire & Camargue gardoise, Sommières & Vaunage
+- `zones-intervention/` : secteurs et liste de toutes les communes
 - `plombier/<commune>/` : une page par commune du Gard (350 communes, liste officielle geo.api.gouv.fr).
-  Chaque page reprend tout le contenu de l'accueil, avec le nom de la commune partout et **aucune mention du Gard**
-  (pratique pour les annonces Google Ads ciblées par ville). Menu, zone et pied de page renvoient vers les communes
-  les plus proches ; formulaire pré-rempli avec la commune. La liste complète est sur `/zones-intervention/`.
+  Chaque page est **une copie exacte de l'accueil** (mêmes rubriques, même menu, même zone, même pied de page),
+  avec le nom de la commune à la place de « Nîmes et tout le Gard » et **aucune mention du Gard**
+  (pratique pour les annonces Google Ads ciblées par ville). La liste complète est sur `/zones-intervention/`.
+- Les anciennes pages secteurs (`/plombier-nimes/`, `/plombier-ales/`…) sont redirigées (301, fichier `_redirects`)
+  vers la page de la ville principale (`/plombier/nimes/`, `/plombier/ales/`…).
 - `notre-entreprise/`, `realisations/`, `faq/`, `contact/`, `merci/`, mentions légales et confidentialité
 - `assets/app.css` et `assets/app.js` : styles et scripts communs
 
