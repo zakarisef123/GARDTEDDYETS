@@ -555,3 +555,9 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
   .nav-toggle span{display:none;}
 }
 .services > .service:last-child:nth-child(odd) .service-actions{max-width:440px;}
+/* Pages ville */
+.city-tag{text-transform:uppercase; letter-spacing:.06em;}
+a.town{text-decoration:none; transition:border-color .2s,color .2s,background .2s;}
+a.town:hover{color:var(--sun); background:rgba(255,255,255,.12);}
+.richtext-tags a.town:hover{color:var(--sun-deep); border-color:var(--sun-deep); background:var(--sand);}
+.city-towns{margin-top:1.4rem;}
