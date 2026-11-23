@@ -316,7 +316,7 @@ body.menu-open{overflow:hidden;}
 .hp-field{position:absolute !important; left:-9999px !important; width:1px; height:1px; overflow:hidden;}
 
 /* ---------- pages intérieures ---------- */
-.top-banner{position:relative; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.9),rgba(16,49,100,.82)),url("/images/hero-plombier.jpg"); background-size:cover; background-position:75% 35%; color:#fff; padding:2.2rem 0 2.8rem; overflow:hidden;}
+.top-banner{position:relative; background:var(--night); color:#fff; padding:2.2rem 0 2.8rem; overflow:hidden;}
 .top-banner::before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:40px 40px;}
 .top-banner > .wrap{position:relative;}
 .top-banner-layout{display:grid; gap:2rem; align-items:center;}
@@ -530,7 +530,7 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
   .qa-layout.qa-full{grid-template-columns:1fr; max-width:880px;}
   .quote-layout{grid-template-columns:1.4fr .8fr; gap:2rem;}
   .quote-layout .f-panel{order:1;} .quote-layout .contact-panel{order:2;}
-  .top-banner{padding:3rem 0 3.8rem; background-image:linear-gradient(95deg,rgba(16,49,100,.97) 0%,rgba(16,49,100,.9) 40%,rgba(16,49,100,.45) 75%,rgba(16,49,100,.25) 100%),url("/images/hero-plombier.jpg"); background-position:right 30%;}
+  .top-banner{padding:3rem 0 3.8rem;}
   .top-banner-layout{grid-template-columns:1.2fr .8fr; gap:3.5rem;}
   .article-layout{grid-template-columns:330px 1fr; gap:2.4rem; align-items:start;}
   .article-layout > .sidebar{order:-1; position:sticky; top:calc(var(--head-h) + 24px);}
