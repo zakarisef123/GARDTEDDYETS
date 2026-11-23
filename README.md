@@ -8,6 +8,10 @@ Site statique (HTML/CSS/JS, sans build) de Teddy-ets (SOS RENOV), entreprise de 
 - `urgence-plombier/`, `prestations/` et une page par prestation (fuite, débouchage, chauffe-eau, sanitaire, dégât des eaux, salle de bain, assainissement)
 - `zones-intervention/` et une page par secteur (tout le Gard, 30) : Nîmes, Alès & Cévennes, Uzès & Pont du Gard,
   Bagnols-sur-Cèze & Gard rhodanien, Beaucaire & Camargue gardoise, Sommières & Vaunage
+- `plombier/<ville>/` : une page d'accueil par commune (72 communes), avec le nom de la ville en haut de page
+  et dans le contenu, sans mention de « tout le Gard » (pratique pour les annonces Google Ads ciblées par ville).
+  Communes voisines (les plus proches) liées entre elles, formulaire pré-rempli avec la commune.
+  Les communes des pages secteurs, de l'accueil et des zones pointent vers ces pages.
 - `notre-entreprise/`, `realisations/`, `faq/`, `contact/`, `merci/`, mentions légales et confidentialité
 - `assets/app.css` et `assets/app.js` : styles et scripts communs
 
