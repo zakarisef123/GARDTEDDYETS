@@ -102,7 +102,7 @@ button{font:inherit;}
 body.menu-open{overflow:hidden;}
 
 /* ---------- héros accueil ---------- */
-.home-hero{position:relative; color:#fff; overflow:hidden; padding:2.6rem 0 3rem; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.82),rgba(16,49,100,.72)),url("/images/hero-nimes.jpg"); background-size:cover; background-position:60% 40%;}
+.home-hero{position:relative; color:#fff; overflow:hidden; padding:2.6rem 0 3rem; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.84),rgba(16,49,100,.74)),url("/images/hero-plombier.jpg"); background-size:cover; background-position:75% 35%;}
 .home-hero::before{display:none;}
 .home-hero .home-hero-text{max-width:640px;}
 .home-hero::before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(110deg,#000 30%,transparent 80%); -webkit-mask-image:linear-gradient(110deg,#000 30%,transparent 80%);}
@@ -316,7 +316,7 @@ body.menu-open{overflow:hidden;}
 .hp-field{position:absolute !important; left:-9999px !important; width:1px; height:1px; overflow:hidden;}
 
 /* ---------- pages intérieures ---------- */
-.top-banner{position:relative; background:var(--night); color:#fff; padding:2.2rem 0 2.8rem; overflow:hidden;}
+.top-banner{position:relative; background-color:var(--night); background-image:linear-gradient(180deg,rgba(16,49,100,.9),rgba(16,49,100,.82)),url("/images/hero-plombier.jpg"); background-size:cover; background-position:75% 35%; color:#fff; padding:2.2rem 0 2.8rem; overflow:hidden;}
 .top-banner::before{content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px); background-size:40px 40px;}
 .top-banner > .wrap{position:relative;}
 .top-banner-layout{display:grid; gap:2rem; align-items:center;}
@@ -516,7 +516,7 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
   .callbar{display:none;}
   .footer-base{padding-bottom:1.6rem; flex-direction:row; justify-content:space-between; align-items:center;}
   .consent{bottom:1.2rem;}
-  .home-hero{padding:5.5rem 0 6rem; background-image:linear-gradient(95deg,rgba(16,49,100,.96) 0%,rgba(16,49,100,.88) 38%,rgba(16,49,100,.35) 70%,rgba(16,49,100,.05) 100%),url("/images/hero-nimes.jpg");}
+  .home-hero{padding:5.5rem 0 6rem; background-image:linear-gradient(95deg,rgba(16,49,100,.96) 0%,rgba(16,49,100,.88) 38%,rgba(16,49,100,.3) 68%,rgba(16,49,100,0) 100%),url("/images/hero-plombier.jpg"); background-position:right 30%;}
   .home-hero-layout{grid-template-columns:1fr;}
   .assure-grid{grid-template-columns:repeat(4,1fr);}
   .assure-pt{border-bottom:none; border-right:1px dashed var(--line); padding:1.3rem 1rem;}
@@ -530,7 +530,7 @@ dialog.viewer p{color:#fff; text-align:center; margin:.8rem 0 0; font-weight:600
   .qa-layout.qa-full{grid-template-columns:1fr; max-width:880px;}
   .quote-layout{grid-template-columns:1.4fr .8fr; gap:2rem;}
   .quote-layout .f-panel{order:1;} .quote-layout .contact-panel{order:2;}
-  .top-banner{padding:3rem 0 3.8rem;}
+  .top-banner{padding:3rem 0 3.8rem; background-image:linear-gradient(95deg,rgba(16,49,100,.97) 0%,rgba(16,49,100,.9) 40%,rgba(16,49,100,.45) 75%,rgba(16,49,100,.25) 100%),url("/images/hero-plombier.jpg"); background-position:right 30%;}
   .top-banner-layout{grid-template-columns:1.2fr .8fr; gap:3.5rem;}
   .article-layout{grid-template-columns:330px 1fr; gap:2.4rem; align-items:start;}
   .article-layout > .sidebar{order:-1; position:sticky; top:calc(var(--head-h) + 24px);}
@@ -561,7 +561,3 @@ a.town{text-decoration:none; transition:border-color .2s,color .2s,background .2
 a.town:hover{color:var(--sun); background:rgba(255,255,255,.12);}
 .richtext-tags a.town:hover{color:var(--sun-deep); border-color:var(--sun-deep); background:var(--sand);}
 .city-towns{margin-top:1.4rem;}
-.city-hero{background-image:linear-gradient(180deg,rgba(16,49,100,.84),rgba(16,49,100,.74)),url("/images/hero-plombier.jpg"); background-position:75% 35%;}
-@media (min-width:980px){
-  .city-hero{background-image:linear-gradient(95deg,rgba(16,49,100,.96) 0%,rgba(16,49,100,.88) 38%,rgba(16,49,100,.3) 68%,rgba(16,49,100,0) 100%),url("/images/hero-plombier.jpg"); background-position:right 30%;}
-}
